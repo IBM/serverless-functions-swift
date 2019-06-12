@@ -13,11 +13,8 @@
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
 </p>
 
-![Cloud Functions](https://developer.ibm.com/code/wp-content/uploads/sites/118/2017/10/IBM-CLOUD-FUNCTIONS-35.png)
 
-## ServerlessAppSwift
-[![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
-[![Platform](https://img.shields.io/badge/platform-swift-lightgrey.svg?style=flat)](https://developer.ibm.com/swift/)
+## Create a serveless Swift application
 
 ### Table of Contents
 * [Summary](#summary)

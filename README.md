@@ -9,7 +9,7 @@
     <a href="https://cloud.ibm.com">
     <img src="https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg" alt="IBM Cloud">
     </a>
-    <img src="https://img.shields.io/badge/platform-go-lightgrey.svg?style=flat" alt="platform">
+    <img src="https://img.shields.io/badge/platform-swift-lightgrey.svg?style=flat" alt="platform">
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
     <a href="http://swift-at-ibm-slack.mybluemix.net/">
     <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status">

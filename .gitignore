@@ -1,0 +1,8 @@
+node_modules
+build
+local.env
+credentials.json
+config.json
+spec.json
+localdev-config.json
+config/localdev-config.json

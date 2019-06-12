@@ -11,6 +11,9 @@
     </a>
     <img src="https://img.shields.io/badge/platform-go-lightgrey.svg?style=flat" alt="platform">
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+    <a href="http://swift-at-ibm-slack.mybluemix.net/">
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status">
+    </a>
 </p>
 
 
@@ -153,6 +156,12 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </tr>
   </tbody>
 </table>
+
+## Next Steps
+* Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift).
+* Explore [Kitura.io](https://www.kitura.io/) for more resources about the Kitura framework.
+* Join the [Swift@IBM slack](http://swift-at-ibm-slack.mybluemix.net/) to get help with your projects.
+* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
 ## License
 

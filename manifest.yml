@@ -1,0 +1,61 @@
+# wskdeploy manifest file
+
+packages:
+  ServerlessAppSwift:
+    version: 1.0
+    license: Apache-2.0
+    inputs: 
+      services.cloudant.url: "{{DATABASE_URL}}"
+      services.cloudant.database: "{{DATABASE}}"
+    actions:
+      create:
+        version: 1.0
+        function: actions/create.swift
+        runtime: swift:3.1.1
+        web-export: true
+      delete:
+        version: 1.0
+        function: actions/delete.swift
+        runtime: swift:3.1.1
+        web-export: true
+      deleteAll:
+        version: 1.0
+        function: actions/deleteAll.swift
+        runtime: swift:3.1.1
+        web-export: true
+      read:
+        version: 1.0
+        function: actions/read.swift
+        runtime: swift:3.1.1
+        web-export: true
+      readAll:
+        version: 1.0
+        function: actions/readAll.swift
+        runtime: swift:3.1.1
+        web-export: true
+      update:
+        version: 1.0
+        function: actions/update.swift
+        runtime: swift:3.1.1
+        web-export: true
+    apis:
+      ServerlessAppSwift:
+        ServerlessAppSwift:
+          api/create:
+            create:
+              method: "POST"
+          api/delete:  
+            delete:
+              method: "DELETE"
+          api/read:
+            read:
+              method: "GET"
+          api/update:
+            update:
+              method: "PUT"
+          api/deleteAll:
+            deleteAll:
+              method: "DELETE"
+          api/readAll:
+            readAll:
+              method: "GET"

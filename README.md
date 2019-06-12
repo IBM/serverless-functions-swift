@@ -17,16 +17,10 @@
 </p>
 
 
-## Create a serveless Swift application
+# Create a serveless Swift application
 
-### Table of Contents
-* [Summary](#summary)
-* [Featured Technologies](#featuredtechnologies)
-* [Included Components](#includedcomponents)
-* [Steps](#steps)
-* [License](#license)
+> We have similar applications available for [Node.js](https://github.com/IBM/serverless-app-nodejs) & [Python](https://github.com/IBM/serverless-app-python).
 
-## Summary
 
 This repository has code to create a serverless Backend for Frontend (BFF) using Swift and IBM Cloud Functions, backend by a NoSQL database. No full stack application management required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions are mapped to an API gateway, which can be integrated into an iOS app, for example, to enable persistence of data into a Cloudant NoSQL Database.
 

@@ -9,24 +9,18 @@
     <a href="https://cloud.ibm.com">
     <img src="https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg" alt="IBM Cloud">
     </a>
-    <img src="https://img.shields.io/badge/platform-go-lightgrey.svg?style=flat" alt="platform">
+    <img src="https://img.shields.io/badge/platform-swift-lightgrey.svg?style=flat" alt="platform">
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+    <a href="http://swift-at-ibm-slack.mybluemix.net/">
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status">
+    </a>
 </p>
 
-![Cloud Functions](https://developer.ibm.com/code/wp-content/uploads/sites/118/2017/10/IBM-CLOUD-FUNCTIONS-35.png)
 
-## ServerlessAppSwift
-[![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
-[![Platform](https://img.shields.io/badge/platform-swift-lightgrey.svg?style=flat)](https://developer.ibm.com/swift/)
+# Create a serveless Swift application
 
-### Table of Contents
-* [Summary](#summary)
-* [Featured Technologies](#featuredtechnologies)
-* [Included Components](#includedcomponents)
-* [Steps](#steps)
-* [License](#license)
+> We have similar applications available for [Node.js](https://github.com/IBM/serverless-app-nodejs) and [Python](https://github.com/IBM/serverless-app-python).
 
-## Summary
 
 This repository has code to create a serverless Backend for Frontend (BFF) using Swift and IBM Cloud Functions, backend by a NoSQL database. No full stack application management required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions are mapped to an API gateway, which can be integrated into an iOS app, for example, to enable persistence of data into a Cloudant NoSQL Database.
 
@@ -156,6 +150,12 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </tr>
   </tbody>
 </table>
+
+## Next Steps
+* Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift).
+* Explore [Kitura.io](https://www.kitura.io/) for more resources about the Kitura framework.
+* Join the [Swift@IBM slack](http://swift-at-ibm-slack.mybluemix.net/) to get help with your projects.
+* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
 ## License
 

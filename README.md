@@ -27,10 +27,8 @@ This repository has code to create a serverless Backend for Frontend (BFF) using
 ## Included Components
 
 * [Cloudant NoSQL DB](https://cloud.ibm.com/catalog/services/cloudant): A fully managed data layer designed for modern web and mobile applications that leverages a flexible JSON schema.
-* [API Connect](http://developer.ibm.com/apiconnect/): Create and run secure APIs and microservices.
 * [Continuous Delivery](https://cloud.ibm.com/catalog/services/continuous-delivery): Enable tool integrations that support your development, deployment, and operation tasks.
 * [GitLab](https://about.gitlab.com/): GitLab unifies issues, code review, CI, and CD into a single UI.
-* [AppID](https://cloud.ibm.com/catalog/services/app-id): Use the IBM Cloud App ID service to add authentication to your mobile and web apps and protect your back-end systems.
 
 ## Featured Technologies
 

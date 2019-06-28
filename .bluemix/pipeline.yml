@@ -68,7 +68,7 @@ stages:
       #!/bin/sh
       ibmcloud login -a ${CF_TARGET_URL} --apikey ${PIPELINE_BLUEMIX_API_KEY}
       ibmcloud target --cf -o ${CF_ORG} -s ${CF_SPACE}
-      if [ "$(bx wsk action invoke ServerlessAppSwift/readAll | grep ok:)" != "" ]; then
+      if [ "$(bx wsk action invoke ServerlessFunctionsSwift/readAll | grep ok:)" != "" ]; then
         echo "Successfully reached health endpoint."
       else
         echo "Could not reach the health endpoint."

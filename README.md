@@ -84,12 +84,6 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
   </tbody>
 </table>
 
-The contents of the `.bluemix` directory consist of configuration files that aid in deploying the `actions` to IBM Cloud Functions. At a minimum, the `.bluemix` directory must contain the following files:
-
-- `toolchain.yml`
-- `deploy.json`
-- `pipeline.yml`
-
 
 ### Deploying to IBM Cloud
 

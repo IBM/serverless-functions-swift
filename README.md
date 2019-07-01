@@ -22,7 +22,9 @@
 > We have similar applications available for [Node.js](https://github.com/IBM/serverless-functions-nodejs) and [Python](https://github.com/IBM/serverless-functions-python).
 
 
-This repository has code to create a serverless Backend for Frontend (BFF) using Swift and IBM Cloud Functions, backed by a NoSQL database. No full stack application management required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions are mapped to an API gateway, which can be integrated into an iOS app, for example, to enable persistence of data into a Cloudant NoSQL Database.
+This repository contains code to create a serverless Backend for Frontend (BFF) using Swift and IBM Cloud Functions, backed by a NoSQL database. With serverless capabilities, no full stack application management is required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions can be mapped to an API gateway, then integrated into an iOS app for example, to enable persistence of data into a Cloudant NoSQL Database. 
+
+Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always-on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models.
 
 ## Included Components
 
@@ -32,79 +34,12 @@ This repository has code to create a serverless Backend for Frontend (BFF) using
 
 ## Featured Technologies
 
-* [Serverless](https://cloud.ibm.com/openwhisk): An event-action platform that allows you to execute code in response to an event.
+* [IBM Cloud Functions](https://cloud.ibm.com/openwhisk): An event-action platform that allows you to execute code in response to an event.
 * [Swift](https://developer.apple.com/swift/): An open-source programming language for Apple devices.
 
 ## Steps
 
-1. [Install developer tools](#1-install-developer-tools)
-1. [Configure your DevOps pipeline](#2-configure-your-devops-pipeline)
-1. [Deploy your serverless application](#3-deploy-your-serverless-application)
-1. [Integrate with your own frontend application](#4-integrate-with-your-own-frontend-application)
-
-### 1. Install developer tools
-
-- [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/reference/ibmcloud/download_cli.html)
-- Cloud Functions Plugin:
-  ```bash
-  ibmcloud plugin install Cloud-Functions -r IBM Cloud
-  ```
-- [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases)
-
-### 2. Configure your DevOps pipeline
-
-The `.bluemix` directory contains all of the configuration files that the toolchain requires to function. At a minimum, the `.bluemix` directory must contain the following files:
-
-- `toolchain.yml`
-- `deploy.json`
-- `pipeline.yml`
-
-Detailed information regarding toolchain configuration can be found in our [docs](https://cloud.ibm.com/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom).
-
-Update the toolchain (`.bluemix/toolchain.yml`) with your desired changes.
-
-Login into the IBM Cloud, substituting your own values for `<api>`, `<org>`, and `<space>`:
-
-```bash
-ibmcloud login -a <api> -o <org> -s <space>
-```
-
-Push your application to stage the toolchain:
-
-```bash
-ibmcloud app push
-```
-
-### 3. Deploy your serverless application
-
-Your application is deployed using the IBM Continuous Delivery pipeline. Your toolchain provides an integrated set of tools to automatically build, deploy, and manage your apps.
-
-#### Manage Cloud Functions and API Connect Manually
-
-Download your code locally by navigate to your App dashboard from the [Apple Development Console](https://cloud.ibm.com/developer/appledevelopment/apps) or [Web Apps Console](https://cloud.ibm.com/developer/appservice/apps) and select **Download Code**.
-
-You have the option to perform either a [Local Deployment](#local-deployment) or an [IBM DevOps deployment](#ibm-devops-deployment).
-
-##### Local Deployment
-
-If you're on Mac or Linux, ensure the `deploy.sh` script is executable and run it:
-
-```
-chmod +x deploy.sh
-./deploy.sh
-```
-
-Or, if you'd rather run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
-
-```bash
-/wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
-```
-
-Where `<url>` is the URL value from your Cloudant service credentials.
-
-### 4. Integrate with your own frontend application
-
-Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always-on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models.
+While you can use the individual actions locally, this collection of endpoints is meant to be deployed to IBM Cloud Functions. You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/b5edbc92-282c-35a7-8c92-8584d9fb39b7/swift-example-serverless-app) or [deploy it manually](#deploying-manually) by cloning this repo first.  
 
 You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in the IBM Cloud Console interface, along with your [Cloud Functions APIs](https://cloud.ibm.com/openwhisk/apimanagement).
 <table>
@@ -148,6 +83,50 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </tr>
   </tbody>
 </table>
+
+The contents of the `.bluemix` directory consist of configuration files that aid in deploying the `actions` to IBM Cloud Functions. At a minimum, the `.bluemix` directory must contain the following files:
+
+- `toolchain.yml`
+- `deploy.json`
+- `pipeline.yml`
+
+
+### Deploying to IBM Cloud
+
+<p align="center">
+    <a href="https://cloud.ibm.com/developer/appservice/starter-kits/b5edbc92-282c-35a7-8c92-8584d9fb39b7/swift-example-serverless-app">
+    <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
+    </a>
+</p>
+
+Use the button above to deploy this same application to IBM Cloud.  This option will create a deployment pipeline, complete with a hosted Git lab project and devops toolchain.  [IBM Cloud DevOps](https://www.ibm.com/cloud-computing/bluemix/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
+
+
+### Deploying Manually 
+
+To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools.  You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
+
+* Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli/index.html#overview) on your machine by using the following installation command: `curl -sL https://ibm.biz/idt-installer | bash`.
+
+
+* Install the [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases).
+
+
+If on a Mac or Linux, ensure the `deploy.sh` script is executable and run it:
+
+```
+chmod +x deploy.sh
+./deploy.sh
+```
+
+Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
+
+```bash
+/wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
+```
+
+Where `<url>` is the URL value from your Cloudant service credentials.
+
 
 ## Next Steps
 * Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift).

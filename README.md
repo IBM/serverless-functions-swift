@@ -16,11 +16,9 @@
     </a>
 </p>
 
-
 # Create a serverless Swift application
 
 > We have similar applications available for [Node.js](https://github.com/IBM/serverless-functions-nodejs) and [Python](https://github.com/IBM/serverless-functions-python).
-
 
 This repository contains code to create a serverless Backend for Frontend (BFF) using Swift and IBM Cloud Functions, backed by a NoSQL database. With serverless capabilities, no full stack application management is required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions can be mapped to an API gateway, then integrated into an iOS app for example, to enable persistence of data into a Cloudant NoSQL Database. 
 
@@ -84,7 +82,6 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
   </tbody>
 </table>
 
-
 ### Deploying to IBM Cloud
 
 <p align="center">
@@ -93,37 +90,35 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </a>
 </p>
 
-Use the button above to deploy this same application to IBM Cloud.  This option will create a deployment pipeline, complete with a hosted Git lab project and devops toolchain.  [IBM Cloud DevOps](https://www.ibm.com/cloud-computing/bluemix/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
-
+Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted Git lab project and devops toolchain.  [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
 
 ### Deploying Manually 
 
 To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools.  You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
 
-* Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli/index.html#overview) on your machine by using the following installation command: `curl -sL https://ibm.biz/idt-installer | bash`.
-
+* Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
+ ```
+ curl -sL https://ibm.biz/idt-installer | bash
+ ```
 
 * Install the [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases).
 
+ For macOS or Linux, ensure the `deploy.sh` script is executable and run it:
+ ```
+ chmod +x deploy.sh
+ ./deploy.sh
+ ```
 
-If on a Mac or Linux, ensure the `deploy.sh` script is executable and run it:
+ Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
 
-```
-chmod +x deploy.sh
-./deploy.sh
-```
+ ```bash
+ /wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
+ ```
 
-Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
-
-```bash
-/wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
-```
-
-Where `<url>` is the URL value from your Cloudant service credentials.
-
+ Where `<url>` is the URL value from your Cloudant service credentials.
 
 ## Next Steps
-* Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift).
+* Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift?topic=swift-getting-started).
 * Explore [Kitura.io](https://www.kitura.io/) for more resources about the Kitura framework.
 * Join the [Swift@IBM slack](http://swift-at-ibm-slack.mybluemix.net/) to get help with your projects.
 * Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.

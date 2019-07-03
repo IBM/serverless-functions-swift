@@ -97,25 +97,25 @@ Use the button above to deploy this same application to IBM Cloud. This option w
 To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools.  You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
 
 * Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
- ```
- curl -sL https://ibm.biz/idt-installer | bash
- ```
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
 
 * Install the [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases).
 
- For macOS or Linux, ensure the `deploy.sh` script is executable and run it:
- ```
- chmod +x deploy.sh
- ./deploy.sh
- ```
+  For macOS or Linux, ensure the `deploy.sh` script is executable and run it:
+  ```
+  chmod +x deploy.sh
+  ./deploy.sh
+  ```
 
- Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
+  Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
 
- ```bash
- /wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
- ```
+  ```bash
+  /wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
+  ```
 
- Where `<url>` is the URL value from your Cloudant service credentials.
+  Where `<url>` is the URL value from your Cloudant service credentials.
 
 ## Next Steps
 * Learn more about augmenting your Swift applications on IBM Cloud with the [Swift Programming Guide](https://cloud.ibm.com/docs/swift?topic=swift-getting-started).

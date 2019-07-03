@@ -90,11 +90,11 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </a>
 </p>
 
-Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted Git lab project and devops toolchain.  [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
+Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted Git lab project and DevOps toolchain. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
 
 ### Deploying Manually 
 
-To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools.  You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
+To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools. You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
 
 * Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
   ```
